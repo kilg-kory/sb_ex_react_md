@@ -1,8 +1,9 @@
 import type { ITask } from 'entities/task/model/types';
 
 import styles from './TaskCard.module.css';
+import React from 'react';
 
-export default function TaskCard({
+const TaskCard = ({
   task,
   onChange,
   onDelete,
@@ -10,7 +11,7 @@ export default function TaskCard({
   task: ITask;
   onChange: (task: ITask) => void;
   onDelete: (id: string) => void;
-}) {
+}) => {
   return (
     <div className={styles.task}>
       <input
@@ -22,4 +23,6 @@ export default function TaskCard({
       <div className={styles.delete}><a onClick={() => onDelete(task.id)}>X</a></div>
     </div>
   );
-}
+};
+
+export default React.memo(TaskCard);

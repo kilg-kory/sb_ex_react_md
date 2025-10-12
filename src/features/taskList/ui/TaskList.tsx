@@ -1,8 +1,9 @@
 import TaskCard, { type ITask } from "entities/task";
 
 import styles from "./TaskList.module.css";
+import { useCallback } from "react";
 
-export default ({
+const TaskList = ({
   tasks,
   onDelete,
   onChange,
@@ -10,12 +11,21 @@ export default ({
   tasks: ITask[];
   onDelete: (id: string) => void;
   onChange: (task: ITask) => void;
-}) => (
-  <div>
-    {tasks.map((task) => (
-      <div key={task.id} className={styles.taskListItem}>
-        <TaskCard task={task} onChange={onChange} onDelete={onDelete} />
-      </div>
-    ))}
-  </div>
-);
+}) => {
+
+  const cbOnChange = useCallback((task: ITask) => {onChange(task)}, []);
+  const cbOnDelete = useCallback((id: string) => {onDelete(id)}, []);
+
+
+  return (
+    <div>
+      {tasks.map((task) => (
+        <div key={task.id} className={styles.taskListItem}>
+          <TaskCard task={task} onChange={cbOnChange} onDelete={cbOnDelete} />
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default TaskList;

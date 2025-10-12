@@ -3,7 +3,7 @@ import type { TFilter } from "shared/filterdButton/index";
 import { statuses } from "../model/initialStatuses";
 import styles from "./FilteredButton.module.css";
 
-export default ({
+const FilteredButton = ({
   value,
   onClick,
 }: {
@@ -24,3 +24,5 @@ export default ({
     </div>
   );
 };
+
+export default FilteredButton;
