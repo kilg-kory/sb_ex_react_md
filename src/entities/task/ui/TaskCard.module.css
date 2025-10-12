@@ -1,0 +1,23 @@
+.task {
+  display: flex;
+  width: 100%;
+  justify-content: left;
+  align-items: center;
+}
+
+.task input[type='checkbox'] {
+  display: flex;
+  height: 15px;
+  width: 15px;
+  justify-content: center;
+}
+
+.task .delete {
+  margin-left: auto;
+}
+
+.task .delete a {
+text-decoration: none;
+  cursor: pointer;
+  color: #000;
+}

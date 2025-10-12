@@ -14,20 +14,26 @@
     "react-dom": "^19.1.1"
   },
   "devDependencies": {
+    "@conarti/eslint-plugin-feature-sliced": "^1.0.5",
     "@eslint/js": "^9.36.0",
+    "@feature-sliced/cli": "^1.0.0",
+    "@feature-sliced/steiger-plugin": "^0.5.7",
     "@types/node": "^24.6.0",
     "@types/react": "^19.1.16",
     "@types/react-dom": "^19.1.9",
     "@vitejs/plugin-react": "^5.0.4",
     "eslint": "^9.36.0",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-fsd": "^1.0.1",
+    "eslint-plugin-boundaries": "^5.0.2",
+    "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.22",
     "globals": "^16.4.0",
     "prettier": "3.6.2",
+    "steiger": "^0.5.11",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.45.0",
-    "vite": "^7.1.7"
+    "vite": "^7.1.7",
+    "vite-tsconfig-paths": "^5.1.4"
   }
 }
