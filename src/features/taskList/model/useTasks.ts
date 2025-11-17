@@ -1,11 +1,23 @@
-import type { TFilter } from "shared/filterdButton/index";
+import type { TFilter } from "shared/filteredButton/index";
 
 import type { ITask } from "entities/task";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { useGetTasksQuery } from "../api/taskApi";
 
-export function useTasks(initialTasks: ITask[]) {
-  const [tasks, setTasks] = useState(initialTasks);
+export function useTasks() {
+  const [tasks, setTasks] = useState<ITask[]>([]);
   const [filter, setFilter] = useState<TFilter>("all");
+
+  const { data, isSuccess } = useGetTasksQuery();
+
+  useEffect(() => {
+    if (data) {
+      setTasks(data)
+    }
+
+  }, [isSuccess, data]);
+
+
 
   const cbRemoveTask = useCallback(
     (id: string) => setTasks((prev) => prev.filter((task) => task.id !== id)),

@@ -1,4 +1,4 @@
-import type { TFilter } from "shared/filterdButton/index";
+import type { TFilter } from "shared/filteredButton/index";
 
 import { statuses } from "../model/initialStatuses";
 import styles from "./FilteredButton.module.css";

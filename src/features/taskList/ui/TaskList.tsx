@@ -13,8 +13,8 @@ const TaskList = ({
   onChange: (task: ITask) => void;
 }) => {
 
-  const cbOnChange = useCallback((task: ITask) => {onChange(task)}, []);
-  const cbOnDelete = useCallback((id: string) => {onDelete(id)}, []);
+  const cbOnChange = useCallback((task: ITask) => {onChange(task)}, [onChange]);
+  const cbOnDelete = useCallback((id: string) => {onDelete(id)}, [onDelete]);
 
 
   return (
