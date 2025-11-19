@@ -4,10 +4,9 @@ import FilteredButton from "shared/filteredButton";
 
 import AddTask from "features/addTask";
 
-
-
 const TaskListWidget = () => {
-  const { tasks, filter, setFilter, removeTask, changeTask, addTask } = useTasks();
+  const { tasks, filter, setFilter, removeTask, changeTask, addTask } =
+    useTasks();
   return (
     <div>
       <FilteredButton value={filter} onClick={setFilter} />

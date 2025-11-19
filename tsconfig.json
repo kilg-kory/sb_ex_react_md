@@ -8,7 +8,6 @@
     "types": ["vite/client"],
     "skipLibCheck": true,
 
-    
     "baseUrl": "src",
     "paths": {
       "shared/*": ["shared/*"],
@@ -18,7 +17,6 @@
       "pages/*": ["pages/*"],
       "app/*": ["app/*"]
     },
-
 
     /* Bundler mode */
     "moduleResolution": "bundler",

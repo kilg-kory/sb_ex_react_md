@@ -1,7 +1,7 @@
-import type { ITask } from 'entities/task/model/types';
+import type { ITask } from "entities/task/model/types";
 
-import styles from './TaskCard.module.css';
-import React from 'react';
+import styles from "./TaskCard.module.css";
+import React from "react";
 
 const TaskCard = ({
   task,
@@ -20,7 +20,9 @@ const TaskCard = ({
         onChange={(e) => onChange({ ...task, completed: e.target.checked })}
       />
       <p>{task.title}</p>
-      <div className={styles.delete}><a onClick={() => onDelete(task.id)}>X</a></div>
+      <div className={styles.delete}>
+        <a onClick={() => onDelete(task.id)}>X</a>
+      </div>
     </div>
   );
 };

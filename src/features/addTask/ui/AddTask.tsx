@@ -4,8 +4,6 @@ import styles from "./AddTask.module.css";
 const AddTask = ({ onAddTask }: { onAddTask: (task: string) => void }) => {
   const ref = useRef<HTMLInputElement>(null);
 
-  
-
   const onAddTaskHandler = () => {
     if (ref.current && ref.current.value.length > 0) {
       onAddTask(ref.current.value);
