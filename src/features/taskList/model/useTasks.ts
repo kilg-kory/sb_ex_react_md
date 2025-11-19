@@ -12,12 +12,9 @@ export function useTasks() {
 
   useEffect(() => {
     if (data) {
-      setTasks(data)
+      setTasks(data);
     }
-
   }, [isSuccess, data]);
-
-
 
   const cbRemoveTask = useCallback(
     (id: string) => setTasks((prev) => prev.filter((task) => task.id !== id)),
